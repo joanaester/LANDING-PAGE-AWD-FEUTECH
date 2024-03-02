@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #E8D8C4, #561C24) ;
+}
+    
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+    
+.button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: #6D2932;
+    font-size: 1rem;
+    color: #EBD9B4;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 5px 5px 0 #C7B7A3;
+    z-index: 1;
+    transition: 05.s;
+    text-align: center;
+    border-radius: 25px;
+
+    &:active{
+        transform: translate(5%, 5%);
+        box-shadow: 0px 0px 0 black;
+        }
+}
+    
+.notification{
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    position: relative;
+    color: transparent;
+    
+    &::after{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    content: attr(data-count);
+    color: #6D2932;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9EFDB;
+    position: absolute;
+    top: -5px;
+    right: -20px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: scale(.5);
+    }
+    
+    &::before{
+    content: "\f0f3";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    color: #EBD9B4;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    }
+    
+    &.count::after{
+    opacity: 1;
+    transform: scale(1);
+    }
+    
+    &.notify::before{
+    animation: bell is ease-in-out;
+    }
+}
+    
+@keyframes bell{
+    0%{
+    transform: rotate(0deg);
+    }
+    25%{
+    transform: rotate(15deg);
+    }
+    50%{
+    transform: rotate(-15deg)
+    }
+    75%{
+    transform: rotate(15deg)
+    }
+    100%{
+    transform: rotate(0deg)
+    }
+}
+    

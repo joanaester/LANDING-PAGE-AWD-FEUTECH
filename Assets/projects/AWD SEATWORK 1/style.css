@@ -1,0 +1,107 @@
+body {
+    background-color: #D63484;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    border-style: solid;
+    border-color: black;
+    background-color: #F8F4EC;
+    max-width: 40rem;
+    max-height: 35rem;
+    margin-left: 25%;
+    margin-top: .2%;
+}
+
+.card:hover .illumination {
+    width: 44.4%;
+    height: 70%;
+    position: absolute; 
+    margin-left: 40px;
+    margin-top: -520px;
+    pointer-events: none;
+    display: none; /* Initially hide the illumination */
+}
+
+.card:hover .illumination.active {
+    display: block; /* Show the illumination when active */
+    background: radial-gradient(
+        circle at var(--x) var(--y),
+        transparent 5%,
+        pink 50%
+    );
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+.card img {
+    border-radius: 5px 5px 0 0;
+    padding-left: 40px;
+    padding-top: 50px;
+    max-width: 35rem;
+    max-height: 25rem;
+    margin-right: 25%;
+}
+
+h4 {
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: xx-large;
+    color: #D63484;
+}
+
+
+.maintext h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.maintext h1 span {
+    color: pink;
+    background: #fff;
+    padding: 10px 20px;
+    font-family: arial;
+    font-weight: 1000;
+    display: table-cell;
+    box-shadow: inset 0 0 5px rgba(0,0,0, .3) , 0 5px 0 #ccc; 
+    animation: animate .5s infinite;
+}
+
+.maintext:hover{   
+    h1 span:nth-child(1) {
+        animation-delay: .2s;
+    }
+    h1 span:nth-child(2) {
+        animation-delay: .4s;  
+    }
+    h1 span:nth-child(3) {
+        animation-delay: .6s;  
+    }
+    h1 span:nth-child(4) {
+        animation-delay: .8s;  
+    }
+    h1 span:nth-child(5) {
+        animation-delay: 1s;  
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);    
+        box-shadow: inset 0 0 5px rgba(0,0,0,.3) , 0 5px 0 #ccc , 0 15px 5px rgba(0,0,0,0);  
+    }
+    50% {
+        transform: translateY(-20px);
+        box-shadow: inset 0 0 5px rgba(0,0,0,.3) , 0 5px 0 #ccc , 0 15px 5px rgba(0,0,0,.6);  
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: inset 0 0 5px rgba(0,0,0,.3) , 0 5px 0 #ccc , 0 15px 5px rgba(0,0,0,0);  
+    }
+}

@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+    --bg-color: rgb(248, 248, 248);
+    --text-color: black;
+    --main-color: black;
+    --white-color: black;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode{
+    --bg-color: #647D87;
+    --main-color: #F6D776;
+    --text-color:#FAEF9B;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn{
+    border-radius: 10px;
+    margin-left: -130px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px var(--main-color);
+}
+
+.btn:hover{
+    color: var(--main-color);    
+}
+
+body {
+    background-color: #f2f2f2;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: -60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 75px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--main-color);
+    color: var(--bg-color);
+    background-color: var(--bg-color);
+}
+
+.profile-img {
+    display: block;
+    margin-left: 185px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-color: var(--main-color);
+    object-fit: cover;
+}
+
+hr {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 5px;
+
+    margin-bottom: 50px;
+    background-color: var(--main-color);
+}
+
+#header {
+    margin-top: -50px;
+}
+#header h1 {
+    color: var(--main-color);
+}
+
+#header td {
+    padding-top: 15px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+#objective h3 {
+    color: var(--main-color);
+}
+
+#objective p{
+    padding-top: 15px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+#acadbackground h3 {
+    color: var(--main-color);
+}
+
+#acadbackground td {
+    padding-top: 15px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+#skills h3 {
+    color: var(--main-color);
+}
+
+#skills ul {
+    padding-top: 15px;
+    font-size: 15px;
+    margin-left: 15px;
+    color: var(--text-color);
+}
